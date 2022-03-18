@@ -1,5 +1,6 @@
-package io.openepcis.xerces;
+package io.openepcis.xml;
 
+import io.openepcis.xerces.XmlSchema11Validator;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
