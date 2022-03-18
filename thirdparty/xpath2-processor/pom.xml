@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.openepcis.thirdparty.org.eclipse.wst.xml.xpath2</groupId>
+    <artifactId>processor</artifactId>
+    <version>1.2.1</version>
+    <parent>
+        <groupId>io.openepcis</groupId>
+        <artifactId>xerces-xmlschema1.1</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <dependencies>
+        <dependency>
+            <groupId>io.openepcis.thirdparty.java_cup</groupId>
+            <artifactId>runtime</artifactId>
+            <version>0.10.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <configuration>
+                            <tasks>
+                                <echo message="unzipping file" />
+                                <unzip src="lib/org.eclipse.wst.xml.xpath2.processor_1.2.1.jar" dest="target/classes" />
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
