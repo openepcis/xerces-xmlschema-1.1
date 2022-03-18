@@ -117,7 +117,7 @@
         <repository>
             <id>github</id>
             <name>GitHub OpenEPCIS XML Validator Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/openepcis/xerces-xmlschema1.1</url>
+            <url>https://maven.pkg.github.com/openepcis/xerces-xmlschema-1.1</url>
         </repository>
     </distributionManagement>
 </project>
